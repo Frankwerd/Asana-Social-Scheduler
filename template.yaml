@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  asana-social-scheduler
+
+  SAM template for the Social Media Scheduler application
+
+Resources:
+  SocialMediaSchedulerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: main.lambda_handler
+      Runtime: python3.11
+      Architectures:
+        - x86_64
+      # Events:
+      #   SchedulerEvent:
+      #     Type: Schedule
+      #     Properties:
+      #       Schedule: 'rate(1 day)' # Example: run once a day
+      #       Enabled: True
+
+Outputs:
+  SocialMediaSchedulerFunction:
+    Description: "Social Media Scheduler Lambda Function ARN"
+    Value: !GetAtt SocialMediaSchedulerFunction.Arn
+  SocialMediaSchedulerFunctionIamRole:
+    Description: "Implicit IAM Role created for Social Media Scheduler function"
+    Value: !GetAtt SocialMediaSchedulerFunctionRole.Arn
