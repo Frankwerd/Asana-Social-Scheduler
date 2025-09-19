@@ -2,7 +2,7 @@ import requests
 import datetime
 
 # Import our configuration variables
-from src import config
+from . import config
 
 class AsanaService:
     """A class to handle all interactions with the Asana API."""

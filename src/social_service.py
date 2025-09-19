@@ -1,5 +1,5 @@
 import requests
-from src import config
+from . import config
 
 class SocialService:
     """A class to handle all interactions with social media APIs."""
