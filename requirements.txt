@@ -1,0 +1,5 @@
+# The library for making HTTP API calls to Asana and other services
+requests
+
+# A library for easily parsing date and time information from Asana
+python-dateutil
