@@ -107,7 +107,7 @@ Execute the main script. The `.env` file will be loaded automatically.```bash
 python src/main.py
 ```
 A successful test run will connect to your Asana project and print `"Found 0 tasks."`.
-
+```
 ***
 
 ## 🚀 Part 3: AWS Deployment
